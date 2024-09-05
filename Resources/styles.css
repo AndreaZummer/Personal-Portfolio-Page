@@ -32,6 +32,7 @@ header {
     height: 3rem;
     border-bottom: 2px solid #f97c31;
     position: fixed;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     background-color: #eee8e4;
@@ -69,9 +70,8 @@ nav a:hover span {
     color: #63605d;
     text-shadow: 0 0 5px #63605d,
     0 0 15px #63605d,
-    0 0 30px #63605d;
+    0 0 20px #63605d;
 }
-
 
 /* 4. Main */
 
