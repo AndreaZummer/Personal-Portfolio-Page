@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <link href="./Resources/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <script src="./Resources/script.js" async></script>
         <title>Andrea Zummerova: Contact</title>
         <link href="./Resources/Images/az-logo-removebg-preview.png" rel="icon">
     </head>
@@ -10,23 +14,31 @@
     <body>
         <header>
             <img src="./Resources/Images/az-logo-removebg-preview.png">
-            <a href="./index.html">Andrea Zummerova</a>
+            <a class="effect contact-page" href="./index.html">Andrea Zummerova</a>
         
         </header>
 
         <main>
-            <h1>Andrea Zummerova</h1>
-            <h2>Contact</h2>
-            <p>Andrea Zummerova <br>
-               Stodolova 1, Kosice<br>
-               Phone Number: +421 908 372 496<br>
-               Mail: adkabodiova@gmail.com
-            </p>
+            <div class="container">
+                <div id="contact-photo">
+                    <img src="./Resources/Images/photo-contact.png">
+                </div>
 
-            <a href="https://www.facebook.com/ada.bodiova" target="_blank"><img src="Resources\Images\facebook-logo.png"></a>
+                <div id="contact" class="clearfix">
+                    <h2>Contact</h2>
+                    <p>Mgr. Andrea Zummerova <br>
+                    Stodolova 1, Košice<br>
+                    <span class="mail">Phone Number:</span> +421 908 372 496<br>
+                    <span class="mail">Mail:</span> adkabodiova@gmail.com
+                    </p>
 
-            <!--img-personal photo-->
-            
+                    <a href="https://www.facebook.com/ada.bodiova" target="_blank"><img src="Resources\Images\facebook-logo.png"></a>
+                </div>
+            </div>
         </main>
+
+        <footer id="contact-footer">
+            <p id="copy">&copy 2024 Andrea Zummerova</p>
+        </footer>
     </body>
 </html>
