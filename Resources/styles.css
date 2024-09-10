@@ -3,7 +3,8 @@
    3. Main
    4. Footer
    5. Contact Page
-   6. Animations*/
+   6. Animations
+   7. Media Queries*/
 
 
 /* 1. Universal Styles*/
@@ -19,7 +20,7 @@ html {
 }
 
 h1 {
-    font-size: 47px;
+    font-size: 2.9rem;
     color:#eee8e4; 
     position: relative;
     left: 21%;
@@ -66,10 +67,11 @@ nav {
 
 header a {
     text-decoration: none;
+    text-align: center;
     font-size: 1.35rem;
     font-weight: 600;
     color:#e26619;
-    width: 14%;
+    width: 20.5%;
 }
 
 a span {
@@ -107,37 +109,39 @@ header a:hover span {
 .photo {
     height: 510px;
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)), 
-                      url(./Images/photo1.png);
-    opacity: 0.8;   
+                      url(./Images/photo1n.png);
+    background-size: cover;
+    opacity: 0.8; 
 }
+
 .photo p {
-    font-size: 30px;
+    font-size: 1.7rem;
     font-weight: 600;
     padding: 26px;
     border: 4px solid #000;
     display: inline-block;
     position: relative;
-    left: -17%;
+    left: -15%;
     top: 45%;
     background-color: #fff;
     opacity: 0.5;
 }
 
 .photo span {
-    font-size: 38px;
+    font-size: 2.4rem;
     font-weight: 800;
     color: #114719;
     
 }
 
 #quote {
-    font-size: 22px;
+    font-size: 1.4rem;
     font-weight: 500;
-    padding: 16px;
+    padding: 1rem;
     border: 4px solid #000;
     display: inline-block;
     position: relative;
-    left: 19%;
+    left: 17%;
     top: 57%;
     background-color: #fff;
     opacity: 0.5;
@@ -156,10 +160,8 @@ header a:hover span {
 
 .skills {
     display: flex;
-    width: 70%;
     justify-content: space-around;
     padding-bottom: 15px;
-
 }
 
 .skills img {
@@ -168,49 +170,56 @@ header a:hover span {
 }
 
 #portfolio {
-    height: 300px;
+    min-height: 330px;
 }
 
 .projects {
     display: flex;
+    justify-content: space-evenly;
 }
 
+.project {
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+    width: 35%;
+}
 .projects a h3 {
     display: inline-block;
-    position: relative;
-    left: 11%;
     padding: 5px;
     font-weight: 700;
     font-size: 20px;
     color: #000;
 }
 
-.description a {
-    display: inline-block;
-}
 .description {
-    width: 25%;
     height: fit-content;
     display: flex;
     flex-direction: column;
-}
-.projects img {
-    width: 100%;
-    height: auto;    
+    margin-bottom: 1rem;
 }
 
 .description p {
     text-align: center;
     padding: 11% 2%;
     font-size: 20px;
-    transform: translate(0,-100%);
+    min-height: 180px;
     background-color: #eee8e4;
     opacity: 0;
-    transition: all 1s;
+    transition: all .9s;
 }
 .description p:hover {
     opacity: 1;
     transition: all 1s;
+}
+.first {
+    background-image: url(./Images/Company-project.png);
+    background-size: cover;
+}
+.second {
+    background-image: url(./Images/Responsive-club.png);
+    background-size: cover;
 }
 
 .languages {
@@ -242,7 +251,6 @@ header a:hover span {
 .contact a:hover {
     animation: none;
 }
-
 
 /* 4. Footer */
 
@@ -305,6 +313,11 @@ header .contact-page {
     font-weight: 700;
 }
 
+#contact-footer {
+    position: absolute;
+    bottom: 0;
+}
+
 /* 6. Animations */
 
 
@@ -351,5 +364,168 @@ header .contact-page {
     display: table;
 }
 
+/* 7. Media Queries*/
+
+@media only screen and (max-width: 1450px) {
+    .photo p{
+        left: -20%;
+        top: 45%;
+    }
+}
 
 
+@media only screen and (max-width: 1300px) {
+    .photo {
+        height: 450px;
+    }
+
+    .photo p {
+        padding: 20px 26px;
+    }
+    
+    #quote {
+        left: 20%;
+        top: 50%;
+    }
+
+    h1 {
+        left: 24%;
+    }
+    .projects {
+        justify-content: space-between;
+    }
+
+    .project {
+        width: 45%;
+    }
+    
+}
+
+@media only screen and (max-width: 1138px) {
+    .photo p{
+        left: 9%;
+        top: 35%;
+    }
+
+    #quote {
+        top: 44%;
+    }
+
+    #contact {
+        height: auto;
+    }
+
+    #contact-photo img {
+        float: none;
+        width: 24%;
+        position: relative;
+        left: 37%;
+        margin: 0;
+    }
+
+    #contact h2 {
+        padding-bottom: 5px;
+        font-size: 30px;
+    }
+
+    #contact p {
+        font-size: 18px;
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .photo {
+        background-position: right;
+    }
+
+    .photo p{
+        left: 5%;
+        top: 35%;
+    }
+
+    #quote {
+        left: 13%;
+        top: 44%;
+    }
+
+    h1 {
+        left: 14%;
+    }
+
+    header .contact-page {
+        font-size: 1.1rem;
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    nav {
+        width: 65%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .project {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    header a {
+        font-size: .95rem;
+    } 
+
+    h1 {
+        left: 13%;
+        top: 50%;
+    }
+
+    .photo p {
+        top: 60%;
+        font-size: 1.3rem;
+        padding: 12px 4px;
+    }
+
+    .photo span {
+        font-size: 1.7rem;
+    }
+
+    #quote {
+        display: none;
+    }
+
+    .skills img {
+        width: 15%;
+    }
+
+    header .contact-page {
+        width: 35%;
+    }
+
+    #contact-photo img {
+        width: 29%;
+        left: 33%;
+    }
+
+    #contact img {
+        width: 10%;
+    }
+
+    .projects {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project {
+        min-width: 311px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .photo p {
+        left: 0.9%;
+    }
+}
