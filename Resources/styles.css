@@ -24,7 +24,7 @@ h1 {
     color:#eee8e4; 
     position: relative;
     left: 21%;
-    top: 25%;
+    top: 20%;
     display: inline-block;
 }
 
@@ -122,9 +122,10 @@ header a:hover span {
     display: inline-block;
     position: relative;
     left: -15%;
-    top: 45%;
+    top: 50%;
     background-color: #fff;
     opacity: 0.5;
+    width: 42%;
 }
 
 .photo span {
@@ -145,6 +146,7 @@ header a:hover span {
     top: 57%;
     background-color: #fff;
     opacity: 0.5;
+    width: initial;
 }
 
 
@@ -184,6 +186,7 @@ header a:hover span {
     justify-items: center;
     align-items: center;
     width: 35%;
+    margin: 0 1%;
 }
 .projects a h3 {
     display: inline-block;
@@ -209,17 +212,34 @@ header a:hover span {
     opacity: 0;
     transition: all .9s;
 }
+
 .description p:hover {
     opacity: 1;
     transition: all 1s;
 }
+
 .first {
     background-image: url(./Images/Company-project.png);
     background-size: cover;
 }
+
 .second {
     background-image: url(./Images/Responsive-club.png);
     background-size: cover;
+}
+
+.third {
+    background-image: url(./Images/Jammming.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fourth {
+    background-image: url(./Images/Python.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .languages {
