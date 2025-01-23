@@ -23,7 +23,7 @@ h1 {
     font-size: 2.9rem;
     color:#eee8e4; 
     position: relative;
-    left: 21%;
+    left: 17%;
     top: 20%;
     display: inline-block;
 }
@@ -117,6 +117,7 @@ header a:hover span {
 .photo p {
     font-size: 1.7rem;
     font-weight: 600;
+    text-align: center;
     padding: 26px;
     border: 4px solid #000;
     display: inline-block;
@@ -142,8 +143,8 @@ header a:hover span {
     border: 4px solid #000;
     display: inline-block;
     position: relative;
-    left: 17%;
-    top: 57%;
+    left: -50%;
+    top: 69%;
     background-color: #fff;
     opacity: 0.5;
     width: initial;
@@ -386,31 +387,51 @@ header .contact-page {
 
 /* 7. Media Queries*/
 
+@media only screen and (max-width: 1570px) {
+    #quote {
+        left: 18%;
+        top: 55%;
+    }
+
+    h1 {
+        left: 21%;
+    }
+}
+
 @media only screen and (max-width: 1450px) {
     .photo p{
-        left: -20%;
+        left: -15%;
         top: 45%;
+    }
+
+    #quote {
+        left: 18%;
+        top: 47%;
     }
 }
 
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1370px) {
     .photo {
         height: 450px;
     }
 
     .photo p {
-        padding: 20px 26px;
+        padding: 20px 22px;
+        font-size: 1.4rem;
     }
     
     #quote {
         left: 20%;
         top: 50%;
+        font-size: 1.3rem;
     }
 
     h1 {
-        left: 24%;
+        left: 22%;
+        top: 15%;
     }
+
     .projects {
         justify-content: space-between;
     }
@@ -421,14 +442,37 @@ header .contact-page {
     
 }
 
+@media only screen and (max-width: 1258px) {
+
+    .photo span {
+        font-size: 1.6rem;
+    }
+
+    .photo p{
+        left: -17%;
+    }
+
+    h1 {
+        top: 14%;
+    }
+
+    .projects a h3 {
+        font-size: 1.1rem;
+    }
+}
+
 @media only screen and (max-width: 1138px) {
     .photo p{
-        left: 9%;
+        left: -17%;
         top: 35%;
     }
 
     #quote {
         top: 44%;
+    }
+
+    .project {
+        margin: 0 1% 0 0;
     }
 
     #contact {
@@ -460,13 +504,14 @@ header .contact-page {
     }
 
     .photo p{
-        left: 5%;
-        top: 35%;
+        left: -27%;
+        top: 45%;
     }
 
     #quote {
-        left: 13%;
-        top: 44%;
+        left: 15%;
+        top: 54%;
+        font-size: 1.1rem;
     }
 
     h1 {
@@ -488,6 +533,15 @@ header .contact-page {
         font-size: 2.2rem;
     }
 
+    .photo p{
+        left: -23%;
+    }
+
+    #quote {
+        left: 10%;
+        top: 50%;
+    }
+
     .project {
         width: 48%;
     }
@@ -500,11 +554,12 @@ header .contact-page {
 
     h1 {
         left: 13%;
-        top: 50%;
+        top: 22%;
     }
 
     .photo p {
         top: 60%;
+        left: -29%;
         font-size: 1.3rem;
         padding: 12px 4px;
     }
@@ -542,10 +597,34 @@ header .contact-page {
     .project {
         min-width: 311px;
     }
+
+    .projects a h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 520px) {
     .photo p {
-        left: 0.9%;
+        left: -35%;
     }
+}
+
+@media only screen and (max-width: 432px) {
+    h1 {
+        left: 22%;
+        top: 2%;
+    } 
+    
+    .photo p {
+        left: 22%;
+        top: 50%;
+        width: 55%;
+    }
+
 }
