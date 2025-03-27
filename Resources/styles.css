@@ -26,13 +26,13 @@ h1 {
 }
 
 h2{
-    font-size: 34px;
+    font-size: 3vw;
     text-align: center;
     padding: 15px 0;
 }
 
 h3 {
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     text-decoration: underline;
     font-weight: 800;
     padding: 1% 1.5%;
@@ -115,6 +115,7 @@ header a:hover span {
 
 .photo {
     height: 29vw;
+    min-height: 12.5rem;
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)), 
                       url(./Images/photo1n.png);
     background-size: cover;
@@ -162,7 +163,7 @@ header a:hover span {
 }
 
 #about-me p {
-    font-size: 20px;
+    font-size: 1.5vw;
     columns: 2;
     text-align: justify;
 }
@@ -204,6 +205,7 @@ header a:hover span {
 .slide {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 }
 
@@ -250,7 +252,7 @@ header a:hover span {
 
 .contact {
     text-align: center;
-    height: 11rem;
+    height: 9rem;
 }
 
 .contact a {
@@ -343,59 +345,44 @@ header .contact-page {
 
 /* 7. Media Queries*/
 
-@media only screen and (max-width: 1570px) {
-    #quote {
-        left: 18%;
-        top: 55%;
+@media only screen and (min-width: 1570px) {
+    header {
+        height: 5rem;
     }
 
-    h1 {
-        left: 21%;
-    }
-}
-
-@media only screen and (max-width: 1450px) {
-    .photo p{
-        left: -15%;
-        top: 45%;
+    header a {
+        font-size: 1.9rem;
     }
 
-    #quote {
-        left: 18%;
-        top: 47%;
+    h2 {
+        font-size: 3rem;
     }
+
+    #portfolio p{
+        font-size: 2rem;
+    }
+    #portfolio h4{
+        font-size: 2.2rem;
+    }
+    .contact {
+        height: 13rem;
+    }
+   
 }
 
 
 @media only screen and (max-width: 1370px) {
-    .photo {
-        height: 450px;
-    }
 
     .photo p {
         padding: 20px 22px;
         font-size: 1.4rem;
     }
-    
     #quote {
-        left: 20%;
-        top: 50%;
         font-size: 1.3rem;
     }
-
-    h1 {
-        left: 22%;
-        top: 15%;
-    }
-
     .projects {
         justify-content: space-between;
-    }
-
-    .project {
-        width: 45%;
-    }
-    
+    } 
 }
 
 @media only screen and (max-width: 1258px) {
@@ -403,30 +390,12 @@ header .contact-page {
     .photo span {
         font-size: 1.6rem;
     }
-
-    .photo p{
-        left: -17%;
-    }
-
-    h1 {
-        top: 14%;
-    }
-
     .projects a h3 {
         font-size: 1.1rem;
     }
 }
 
 @media only screen and (max-width: 1138px) {
-    .photo p{
-        left: -17%;
-        top: 35%;
-    }
-
-    #quote {
-        top: 44%;
-    }
-
     .project {
         margin: 0 1% 0 0;
     }
@@ -459,20 +428,15 @@ header .contact-page {
         background-position: right;
     }
 
-    .photo p{
-        left: -27%;
-        top: 45%;
-    }
 
     #quote {
-        left: 15%;
-        top: 54%;
         font-size: 1.1rem;
     }
 
-    h1 {
-        left: 14%;
+    h3 {
+        font-size: 2.3vw;
     }
+
 
     header .contact-page {
         font-size: 1.1rem;
@@ -481,47 +445,36 @@ header .contact-page {
 }
 
 @media only screen and (max-width: 950px) {
-    nav {
-        width: 65%;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .photo p{
-        left: -23%;
-    }
 
     #quote {
-        left: 10%;
-        top: 50%;
+        display: none;
     }
 
-    .project {
-        width: 48%;
+    header a {
+        font-size: 1.7vw;
     }
-}
+    h3 {
+        font-size: 2vw;
+    }
+    .contact a{
+        font-size: 1.8vw;
+    }
 
 @media only screen and (max-width: 810px) {
     header a {
         font-size: .95rem;
     } 
-
-    h1 {
-        left: 13%;
-        top: 22%;
+    h3 {
+        font-size: 2.7vw;
     }
 
     .photo p {
-        top: 60%;
-        left: -29%;
         font-size: 1.3rem;
         padding: 12px 4px;
     }
 
     .photo span {
-        font-size: 1.7rem;
+        font-size: 2.8vw;
     }
 
     #quote {
@@ -553,9 +506,24 @@ header .contact-page {
     .project {
         min-width: 311px;
     }
-
-    .projects a h3 {
-        font-size: 1.3rem;
+    .slide p {
+        font-size: 1.7vw;
+    }
+    h1 {
+        font-size: 3.5vw;
+        margin-left: 20%;
+    }
+    .container {
+        margin-bottom: 3%;
+    }
+    nav {
+        margin-right: 4%;
+    }
+    #about-me {
+        margin-bottom: 0;
+    }
+    .contact {
+        height: 5rem;
     }
 }
 
@@ -563,24 +531,130 @@ header .contact-page {
     .container {
         width: 100%;
     }
+
+    .presentation {
+        flex-direction: column;
+    }
+
+    .slide p {
+        font-size: 2.4vw;
+    }
+
+    header p span{
+        font-size: 1.5vw;
+    }
+
+    .photo p {
+        font-size: 2vw;
+    }
+
+    .project h3 {
+        font-size: 2.7vw;
+    }
+    #portfolio {
+        margin-top: 3%;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+    #copy {
+        font-size: 2vw;
+    }
+    .intro {
+        padding-bottom: 2rem;
+        box-sizing: content-box;
+    }
+
 }
 
 @media only screen and (max-width: 520px) {
-    .photo p {
-        left: -35%;
+    .intro {
+        padding-bottom: 4rem;
+    }
+    h2 {
+        font-size: 4vw;
+        padding-bottom: 1%;
+    }
+    .project h3 {
+        font-size: 3.3vw;
+    }
+    h4 {
+        font-size: 2.5vw;
+    }
+    .project p {
+        font-size: 2.2vw;
+    }
+    .slide p {
+        font-size: 2.9vw;
+    }
+
+    header a {
+        font-size: .75rem;
+    }
+    nav {
+        width: 65%;
+    }
+    .photo p span {
+        font-size: 1.4rem;
+    }
+    #about-me p {
+        font-size: 2.1vw;
+    }
+    .background {
+        padding-right: 0;
+        padding-left: 3%;
     }
 }
 
 @media only screen and (max-width: 432px) {
-    h1 {
-        left: 22%;
-        top: 2%;
-    } 
-    
+    .photo {
+        justify-content: space-evenly;
+    }
+
+    .photo h1 {
+        margin-left: 30%
+    }
     .photo p {
         left: 22%;
         top: 50%;
         width: 55%;
+    }
+    #contact img {
+        width: 11%;
+    }
+
+    .contact a {
+        font-size: 2vw;
+        padding: 3%;
+        top: 30%;
+    }
+
+    .project h3 {
+        font-size: 4.6vw;
+        padding-top: 4%;
+    }
+    .slide p {
+        font-size: 2.95vw;
+    }
+    .slide img {
+        width: 75%;
+    }
+    .skills img {
+        width: 10%;
+    }
+    .intro {
+        height: 50vw;
+        padding-bottom: 2rem;
+    }
+    .photo {
+        height: 45vw;
+    }
+    .photo p span {
+        font-size: 1.1rem;
+    }
+    .photo p {
+        font-size: .8rem;
     }
 
 }
