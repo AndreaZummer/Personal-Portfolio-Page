@@ -20,19 +20,26 @@ html {
 }
 
 h1 {
-    font-size: 2.9rem;
+    font-size: 2.6vw;
     color:#eee8e4; 
-    position: relative;
-    left: 17%;
-    top: 20%;
-    display: inline-block;
+    margin-left: 25%;
 }
 
 h2{
     font-size: 34px;
     text-align: center;
     padding: 15px 0;
-    
+}
+
+h3 {
+    font-size: 1.5vw;
+    text-decoration: underline;
+    font-weight: 800;
+    padding: 1% 1.5%;
+}
+
+h4 {
+    padding: 1.5%;
 }
 
 .italic {
@@ -102,52 +109,51 @@ header a:hover span {
 }
 
 .intro {
-    height: 620px;
-    padding-top: 45px;
+    height: 32vw;
+    padding-top: 1.2rem;
 }
 
 .photo {
-    height: 510px;
+    height: 29vw;
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)), 
                       url(./Images/photo1n.png);
     background-size: cover;
     opacity: 0.8; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .photo p {
-    font-size: 1.7rem;
+    font-size: 1.7vw;
     font-weight: 600;
     text-align: center;
-    padding: 26px;
+    padding: 2%;
     border: 4px solid #000;
     display: inline-block;
-    position: relative;
-    left: -15%;
-    top: 50%;
     background-color: #fff;
     opacity: 0.5;
     width: 42%;
+    margin-left: 15%;
 }
 
 .photo span {
-    font-size: 2.4rem;
+    font-size: 2.2vw;
     font-weight: 800;
     color: #114719;
     
 }
 
 #quote {
-    font-size: 1.4rem;
+    font-size: 1.4vw;
     font-weight: 500;
-    padding: 1rem;
+    padding: .7rem;
     border: 4px solid #000;
     display: inline-block;
-    position: relative;
-    left: -50%;
-    top: 69%;
     background-color: #fff;
     opacity: 0.5;
-    width: initial;
+    width: 30%;
+    margin-left: 21%;
 }
 
 
@@ -173,29 +179,47 @@ header a:hover span {
 }
 
 #portfolio {
-    min-height: 330px;
+    height: fit-content;
 }
 
 .projects {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .project {
     display: flex;
     flex-flow: column;
     justify-items: center;
-    align-items: center;
-    width: 35%;
-    margin: 0 1%;
+    /* align-items: center; */
 }
-.projects a h3 {
-    display: inline-block;
-    padding: 5px;
-    font-weight: 700;
-    font-size: 20px;
-    color: #000;
+
+.project p {
+    padding: 1%;
 }
+.presentation {
+    display: flex;
+} 
+
+.slide {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slide p {
+    text-align: center;
+    font-size: 1.4vw;
+    font-weight: 600;
+    padding: 2%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    padding: 3%;
+}
+
 
 .description {
     height: fit-content;
@@ -219,29 +243,6 @@ header a:hover span {
     transition: all 1s;
 }
 
-.first {
-    background-image: url(./Images/Company-project.png);
-    background-size: cover;
-}
-
-.second {
-    background-image: url(./Images/Responsive-club.png);
-    background-size: cover;
-}
-
-.third {
-    background-image: url(./Images/Jammming.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.fourth {
-    background-image: url(./Images/Python.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
 .languages {
     color:#e26619;
@@ -255,22 +256,17 @@ header a:hover span {
 .contact a {
     text-decoration: none;
     color: #e17e40;
-    font-size: 26px;
+    font-size: 1.5vw;
     font-weight: 700;
     border: 4px solid #11AE43;
     box-shadow: 0 0 10px #ecab13;
-    border-radius: 40%;
+    border-radius: 25px;
     position: relative;
     top: 3rem;
-    padding: 2rem;
+    padding: 2%;
     background-image: url(./Images/grey_wash_wall.png);
     text-shadow: 0 0 1px #000;
     display: inline-block;
-    animation: shake 1s infinite;
-}
-
-.contact a:hover {
-    animation: none;
 }
 
 /* 4. Footer */
@@ -337,46 +333,6 @@ header .contact-page {
 #contact-footer {
     position: absolute;
     bottom: 0;
-}
-
-/* 6. Animations */
-
-
-@keyframes shake{
-    0%{
-        transform: translate(2px, 2px);
-    }
-    10%{
-        transform: translate(1px, 0px);
-    }
-    20%{
-        transform: translate(-1px, 2px);
-    }
-    30%{
-        transform: translate(1px, 0px);
-    }
-    40%{
-        transform: translate(0px, 2px);
-    }
-    50%{
-        transform: translate(2px, 3px);
-    }
-    60%{
-        transform: translate(4px, 1px);
-    }
-    70%{
-        transform: translate(2px, 3px) ;
-    }
-    80%{
-        transform: translate(4px, 1px);
-    }
-    90%{
-        transform: translate(1px, 3px);
-    }
-    100%{
-        transform: translate(2px, 1px);
-    }
-
 }
 
 .clearfix::after {
